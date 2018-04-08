@@ -1,12 +1,12 @@
 var matrix = [];
-var side = 7;
+var side = 12;
 var grassArr = [];
 var xotakerArr = [];
 var gishatichArr = [];
 var waterArr = [];
 var fireArr = [];
-matrix_length = 75;
-matrix_hight = 75;
+matrix_length = 46;
+matrix_hight = 46;
 function setup() {
  for (var i = 0; i < matrix_length; i++) {
       matrix[i] = [];
@@ -77,7 +77,7 @@ function draw() {
        }
   }
   for (var i in grassArr) {
-    grassArr[i].bazmanal();
+      grassArr[i].bazmanal();
   }
   for (var i in xotakerArr) {
       xotakerArr[i].utel();
@@ -98,7 +98,7 @@ function draw() {
   }
   for (var i in fireArr) {
       fireArr[i].utel();
-      fireArr[i].mah();
+      fireArr[i].mahanal();
   }
 }
 
