@@ -1,4 +1,17 @@
 class water extends parent{
+    stanalnorkoordinatner()
+    {
+        this.directions = [
+            [this.x - 1, this.y - 1],
+            [this.x, this.y - 1],
+            [this.x + 1, this.y - 1],
+            [this.x - 1, this.y],
+            [this.x + 1, this.y],
+            [this.x - 1, this.y + 1],
+            [this.x, this.y + 1],
+            [this.x + 1, this.y + 1]
+        ];
+    }
     mah(){
         var arr = this.yntrelVandak(1);
         if(arr.length > 3){
@@ -13,6 +26,7 @@ class water extends parent{
         
     }
     utel(){
+        this.stanalnorkoordinatner();
         var a = this.yntrelVandak(5);
         for(var i in a){
             matrix[a[i][1]][a[i][0]] = 4;
@@ -28,6 +42,7 @@ class water extends parent{
         return a;
     }
     sharjvel(){
+        this.stanalnorkoordinatner();
         var a = random(this.yntrelVandak(0));
         if(a){
             matrix[a[1]][a[0]] = 4;

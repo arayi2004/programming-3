@@ -1,5 +1,19 @@
 class fire extends parent{
+    stanalnorkoordinatner()
+    {
+        this.directions = [
+            [this.x - 1, this.y - 1],
+            [this.x, this.y - 1],
+            [this.x + 1, this.y - 1],
+            [this.x - 1, this.y],
+            [this.x + 1, this.y],
+            [this.x - 1, this.y + 1],
+            [this.x, this.y + 1],
+            [this.x + 1, this.y + 1]
+        ];
+    }
     utel(){
+        this.stanalnorkoordinatner();
         var a = this.yntrelVandak(1);
         for(var i in a){
             matrix[a[i][1]][a[i][0]] = 5;

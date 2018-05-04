@@ -1,5 +1,19 @@
-class Grass extends parent{    
+class Grass extends parent{  
+    stanalnorkoordinatner()
+    {
+        this.directions = [
+            [this.x - 1, this.y - 1],
+            [this.x, this.y - 1],
+            [this.x + 1, this.y - 1],
+            [this.x - 1, this.y],
+            [this.x + 1, this.y],
+            [this.x - 1, this.y + 1],
+            [this.x, this.y + 1],
+            [this.x + 1, this.y + 1]
+        ];
+    }  
    bazmanal() {
+        this.stanalnorkoordinatner()
         this.multiply++;
         var norVandak = random(this.yntrelVandak(0));
         ////(norVandak, this.multiply);

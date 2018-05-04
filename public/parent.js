@@ -7,7 +7,7 @@ class parent
         this.y = y;
         this.energy = 4;
         this.kerac = 0;
-        matrix[this.y][this.x] = 1;
+        //matrix[this.y][this.x] = 1;
         this.directions = [
             [this.x - 1, this.y - 1],
             [this.x, this.y - 1],
@@ -33,18 +33,6 @@ class parent
         
         return found;
     }
-    stanalnorkoordinatner()
-    {
-        this.directions = [
-            [this.x - 1, this.y - 1],
-            [this.x, this.y - 1],
-            [this.x + 1, this.y - 1],
-            [this.x - 1, this.y],
-            [this.x + 1, this.y],
-            [this.x - 1, this.y + 1],
-            [this.x, this.y + 1],
-            [this.x + 1, this.y + 1]
-        ];
-    }
+    
     
 }

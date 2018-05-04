@@ -1,5 +1,19 @@
 class xotaker extends parent{
+    stanalnorkoordinatner()
+    {
+        this.directions = [
+            [this.x - 1, this.y - 1],
+            [this.x, this.y - 1],
+            [this.x + 1, this.y - 1],
+            [this.x - 1, this.y],
+            [this.x + 1, this.y],
+            [this.x - 1, this.y + 1],
+            [this.x, this.y + 1],
+            [this.x + 1, this.y + 1]
+        ];
+    }
      bazmanal() {
+        this.stanalnorkoordinatner();
         this.multiply++;
         var norVandak = random(this.yntrelVandak(0));
         ////(norVandak, this.multiply);
@@ -11,6 +25,7 @@ class xotaker extends parent{
         }
     }
     utel(){
+        this.stanalnorkoordinatner();
         var a = random(this.yntrelVandak(1));
         if(a){
             matrix[a[1]][a[0]] = 2;
@@ -29,6 +44,7 @@ class xotaker extends parent{
         return a;
     }
     sharjvel(){
+        this.stanalnorkoordinatner()
         var a = random(this.yntrelVandak(0));
         if(a && !(this.utel())){
             matrix[a[1]][a[0]] = 2;

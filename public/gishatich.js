@@ -1,6 +1,19 @@
 class gishatich extends parent {
-    
+    stanalnorkoordinatner()
+    {
+        this.directions = [
+            [this.x - 1, this.y - 1],
+            [this.x, this.y - 1],
+            [this.x + 1, this.y - 1],
+            [this.x - 1, this.y],
+            [this.x + 1, this.y],
+            [this.x - 1, this.y + 1],
+            [this.x, this.y + 1],
+            [this.x + 1, this.y + 1]
+        ];
+    }
     utel(){
+        this.stanalnorkoordinatner();
         this.speed++;
         var a = random(this.yntrelVandak(2));
         if(a && this.speed % 8 == 0){
@@ -21,6 +34,7 @@ class gishatich extends parent {
         return a;
     }
     sharjvel(){
+         this.stanalnorkoordinatner();
         this.speed++;
         var a = random(this.yntrelVandak(0));
         if(a && !(this.utel()) && this.speed % 8 == 0){
