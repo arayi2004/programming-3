@@ -35,17 +35,22 @@ function setup() {
     for (var i = 0; i < matrix_length; i++) {
         matrix[i] = [];
         for (var j = 0; j < matrix_hight; j++) {
-            matrix[i][j] = Math.round(random(0, 1101)) % 5;
+            matrix[i][j] = floor(random(0, 3));    
         }
+    };
+    for (var i = 0; i < 20; i++)
+    {
+        matrix[round(random(0, matrix_length))][round(random(0, matrix_hight))] = 4;
     }
-    matrix[5][45] = 5;
-    matrix[45][5] = 5;
-    matrix[5][5] = 5;
+    matrix[0][0] = 5;
     matrix[45][45] = 5;
-    matrix[21][34] = 2;
+    matrix[0][45] = 5;
+    matrix[45][0] = 5;
+    console.log(matrix);
     frameRate(10);
     createCanvas(matrix[0].length * side, matrix.length * side);
     strokeWeight(0.1);
+    //noStroke(); 
     background('#5a5a5a');
     for (var y = 0; y < matrix.length; y++)
         for (var x = 0; x < matrix[y].length; x++) {
@@ -53,12 +58,12 @@ function setup() {
                 var gr = new Grass(x, y);
                 grassArr.push(gr);
             }
-            else if (matrix[y][x] == 2) {
-                var xt = new xotaker(x, y);
+            else if (Math.floor(matrix[y][x]) == 2) {
+                var xt = new xotaker(x, y, matrix[y][x] - Math.floor(matrix[y][x]));
                 xotakerArr.push(xt);
             }
-            else if (matrix[y][x] == 3) {
-                var gish = new gishatich(x, y);
+            else if (Math.floor(matrix[y][x]) == 3) {
+                var gish = new gishatich(x, y, matrix[y][x] - Math.floor(matrix[y][x]));
                 gishatichArr.push(gish);
             }
             else if (matrix[y][x] == 4) {

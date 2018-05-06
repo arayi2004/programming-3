@@ -34,7 +34,7 @@ class gishatich extends parent {
         return a;
     }
     sharjvel(){
-         this.stanalnorkoordinatner();
+        this.stanalnorkoordinatner();
         this.speed++;
         var a = random(this.yntrelVandak(0));
         if(a && !(this.utel()) && this.speed % 8 == 0){
@@ -48,14 +48,20 @@ class gishatich extends parent {
         }
     }
     bazmanal() {
-        var norVandak = random(this.yntrelVandak(0));
-        if (this.kerac >= 4 && norVandak) {
-            var gishatich1 = new gishatich(norVandak[0], norVandak[1]);
-            xotakerArr.push(gishatich1);
-            matrix[norVandak[1]][norVandak[0]] = 3;
-            this.kerac = 0;
-            this.energy = 4;
-            //(1);
+        this.multiply++;
+        if (this.ser == "female") {
+            var male = (this.yntrelVandak(2));
+            if (male) {
+                this.stanalnorkoordinatner();
+                var norVandak = random(this.yntrelVandak(0));
+                ////(norVandak, this.multiply);
+                if (this.multiply >= this.speed && norVandak) {
+                    var norgish = new gishatich(norVandak[0], norVandak[1]);
+                    gishatichArr.push(norgish);
+                    matrix[norVandak[1]][norVandak[0]] = 3;
+                    this.multiply = 0;
+                }
+            }
         }
     }
     mahanal(){

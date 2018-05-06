@@ -13,7 +13,7 @@ class Grass extends parent{
         ];
     }  
    bazmanal() {
-        this.stanalnorkoordinatner()
+        this.stanalnorkoordinatner();
         this.multiply++;
         var norVandak = random(this.yntrelVandak(0));
         ////(norVandak, this.multiply);
